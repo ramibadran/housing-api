@@ -1,4 +1,4 @@
-# Sample API's
+# Housing API's
 
 Hotels APIs are 
 - API that consumes third party hotels APIs and returns the filtered results in JSON format based on user queries.
@@ -11,8 +11,8 @@ Hotels APIs are
 After you have all the requirements setup, clone the project and start it by running the following commands in your terminal:
 
 ~~~
-Git clone https://github.com/ramibadran/sample-api.git
-cd sample-api
+Git clone https://github.com/ramibadran/hosuing-api.git
+cd housing-api
 cp .env_prod .env (change the variable basd on your configurations) 
 composer install
 php artisan migrate
