@@ -12,9 +12,10 @@ class EncryptController extends Controller
         $apiName = $request->api;
 
         // provided by API owner to his client;
-        $privateKey = '1234567887654321';
-        $username   = 'ramibadran';
-        $secretKey  = '1234567887654321';
+        $privateKey  = '1234567887654321';
+        $username    = 'ramibadran';
+        $secretKey   = '1234567887654321';
+        $orginalData = '';
 
         // prepare data
         if($apiName == 'token'){
