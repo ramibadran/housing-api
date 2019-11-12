@@ -9,7 +9,7 @@ Hotels APIs are
 ## Installing
 
 After you have all the requirements setup, clone the project and start it by running the following commands in your terminal:
-
+ 
 ~~~
 git clone git@github.com:ramibadran/housing-api.git
 cd housing-api
