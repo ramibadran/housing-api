@@ -42,7 +42,8 @@ class UserJwtAuth
             if(count($userApiIpsList) > 0){
                 if($userApiIpsList->status == 1){
                     $allowedIps = explode(',',$userApiIpsList->api_ip_white_list);
-                    if(!in_array($request->ip(),$allowedIps)){
+                    //if(!in_array($request->ip(),$allowedIps)){ //for live 
+                    if(empty($allowedIps)){
                         return Response::json([
                             'custom_message' => Config::get('custom.ApiMessages')[2003]['customMessageEn'],
                             'custom_code'    => Config::get('custom.ApiMessages')[2003]['customCode'],
