@@ -77,7 +77,7 @@ http://127.0.0.1:8000/encrypt?api=token
 http://127.0.0.1:8000/encrypt?api=create
 ~~~
 
-- Documentation
+- Documentation (under development)
 
 ~~~  
 http://127.0.0.1:8080/api/documentation
@@ -94,7 +94,7 @@ http://127.0.0.1:8080/api/documentation
 - Ctype PHP Extension
 - JSON PHP Extension
 - BCMath PHP Extension
-- laravel 5.2 (Follow the instructions in Laravel's documentation https://laravel.com/docs/5.7/installation)
+- laravel 5.7 (Follow the instructions in Laravel's documentation https://laravel.com/docs/5.7/installation)
 - apache/nginx
 - Web server supports PHP 7.1 or higher (apache2/nginx)
 - Composer 
