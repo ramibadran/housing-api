@@ -16,7 +16,7 @@ cd housing-api
 cp .env_prod .env (change the variable basd on your configurations) 
 composer install
 php artisan migrate
-php artisan db:seed --class=ClientTableSeeder
+php artisan db:seed --class=UserTableSeeder
 php artisan l5-swagger:publish
 php artisan l5-swagger:generate
 php artisan serve --port=8080
