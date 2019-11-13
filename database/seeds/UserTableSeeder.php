@@ -13,7 +13,7 @@ class UserTableSeeder extends Seeder
     {
         \DB::table('users')->insert(array (
             0 =>[
-                'id'                =>  1,
+                #'id'                =>  1,
                 'name'              =>  'rami badran',
                 'username'          =>  'rami',
                 'email'             =>  'ramibadran.82@gmail.com',
