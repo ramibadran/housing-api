@@ -23,9 +23,9 @@ class ThirdPartyhHotels extends TestCase{
     
     private function mockRequestData(array $cutom_attributes = []){
         $request = [
-            'from' => $cutom_attributes['from'] ?? Carbon::today()->format('y-m-d'),
-            'to' => $cutom_attributes['to'] ?? Carbon::today()->addDays(3)->format('y-m-d'),
-            'city' => 'ATH',
+            'from'         => $cutom_attributes['from'] ?? Carbon::today()->format('y-m-d'),
+            'to'           => $cutom_attributes['to'] ?? Carbon::today()->addDays(3)->format('y-m-d'),
+            'city'         => 'ATH',
             'adult_number' => $cutom_attributes['adult_number'] ?? rand(4, 10)
         ];
         return $request;
@@ -34,11 +34,11 @@ class ThirdPartyhHotels extends TestCase{
     public function test_call_api_without_authentication(){
         $data = [
             'from_date'      => "2019-11-03",
-            'to_date'        => "2019-12-03",
+            'to'             => "2019-12-03",
             'city'           => 'AUH',
             'adults_ number' => 10,
         ];
-        $response = $this->json('GET', '/api/OurHotels',$data);
+        $response = $this->get(route('hotels.third.search', $request));
         $response->assertStatus(400);
     }
 }
