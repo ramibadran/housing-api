@@ -30,4 +30,15 @@ class ThirdPartyhHotels extends TestCase{
         ];
         return $request;
     }
+    
+    public function test_call_api_without_authentication(){
+        $data = [
+            'from_date'      => "2019-11-03",
+            'to_date'        => "2019-12-03",
+            'city'           => 'AUH',
+            'adults_ number' => 10,
+        ];
+        $response = $this->json('GET', '/api/OurHotels',$data);
+        $response->assertStatus(400);
+    }
 }
