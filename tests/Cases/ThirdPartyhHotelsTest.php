@@ -5,7 +5,7 @@ use Illuminate\Foundation\Testing\TestResponse;
 use Tests\TestCase;
 use Carbon\Carbon;
 
-class ThirdPartyhHotels extends TestCase{
+class ThirdPartyhHotelsTest extends TestCase{
 
     public function send_non_integer_adult_number_leads_to_failure_of_search_results(){
         $request = $this->mockRequestData(['adult_number' => 'dummy']);
@@ -38,7 +38,7 @@ class ThirdPartyhHotels extends TestCase{
             'city'           => 'AUH',
             'adults_ number' => 10,
         ];
-        $response = $this->get(route('hotels.third.search', $request));
-        $response->assertStatus(400);
+        $response = $this->get(route('hotels.third.search', $data));
+        $response->assertStatus(401);
     }
 }
